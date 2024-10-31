@@ -52,28 +52,40 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
+
             <!-- Paper information -->
-            <h1 class="title is-1 publication-title">Mask Factory: Towards High-quality Synthetic Data Generation For
+            <h1 class="title is-1 publication-title">Mask Factory: Towards High-Quality Synthetic Data Generation for
               Dichotomous Image Segmentation</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="LINK TO HAOTIAN QIAN PROFILE" target="_blank">Haotian Qian</a><sup>1,2*</sup>,</span>
+                <a href="LINK TO HAOTIAN QIAN PROFILE" target="_blank">Haotian Qian</a><sup>1*</sup>,
+              </span>
               <span class="author-block">
-                <a href="LINK TO YD CHEN PROFILE" target="_blank">YD Chen</a><sup>2*</sup>,</span>
+                <a href="LINK TO YD CHEN PROFILE" target="_blank">YD Chen</a><sup>1*</sup>,
+              </span>
               <span class="author-block">
-                <a href="LINK TO SHENGTAO LOU PROFILE" target="_blank">Shengtao Lou</a><sup>1</sup>,</span>
+                <a href="LINK TO SHENGTAO LOU PROFILE" target="_blank">Shengtao Lou</a><sup>1</sup>,
+              </span>
               <span class="author-block">
-                <a href="LINK TO FAHAD SHAHBAZ KHAN PROFILE" target="_blank">Fahad Khan</a><sup>3</sup>,</span>
+                <a href="LINK TO FAHAD SHAHBAZ KHAN PROFILE" target="_blank">Fahad Shahbaz Khan</a><sup>3,4</sup>,
+              </span>
               <span class="author-block">
-                <a href="LINK TO XIAOGANG JIN PROFILE" target="_blank">Xiaogang Jin</a><sup>1</sup>,</span>
+                <a href="LINK TO XIAOGANG JIN PROFILE" target="_blank">Xiaogang Jin</a><sup>1†</sup>,
+              </span>
               <span class="author-block">
-                <a href="LINK TO DENG-PING FAN PROFILE" target="_blank">Deng-Ping Fan</a><sup>2*</sup></span>
+                <a href="LINK TO DENG-PING FAN PROFILE" target="_blank">Deng-Ping Fan</a><sup>2,3</sup>
+              </span>
             </div>
             <div class="is-size-5 publication-authors">
-              <span class="author-block"> <sup>1</sup> Zhejiang University, <sup>2</sup>Nankai University,
-                <sup>3</sup>MBZUAI<br>NeurIPS 2024</span>
-              <span class="eql-cntrb"><small><br><sup>*</sup> Indicates Equal Contribution</small></span>
+              <div style="display: inline-block; text-align: center;">
+                <span class="author-block"><sup>1</sup> State Key Lab of CAD&CG, Zhejiang University, <sup>2</sup>
+                  VCIP&CS, Nankai University</span><br>
+                <span class="author-block"><sup>3</sup> MBZUAI, <sup>4</sup> Linköping University</span>
+              </div>
+              <span class="eql-cntrb">
+                <small><br><sup>*</sup> Indicates Equal Contribution <sup>†</sup> Indicates Corresponding Author</small>
+              </span>
             </div>
             <!-- Paper links -->
             <div class="column has-text-centered">
@@ -120,14 +132,14 @@
                 </span>
                 <!-- Huggingface Space Link -->
                 <!-- <span class="link-block">
-                  <a href="https://huggingface.co/datasets/Eliahu/LoWRA-Bench" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      🤗
-                    </span>
-                    <span>Demo</span>
-                  </a>
-                </span> -->
+                <a href="https://huggingface.co/datasets/Eliahu/LoWRA-Bench" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    🤗
+                  </span>
+                  <span>Demo</span>
+                </a>
+              </span> -->
               </div>
             </div>
           </div>
@@ -142,12 +154,15 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <!-- <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
-          <!-- Your video here -->
-          <!-- <source src="static/videos/banner_video.mp4" type="video/mp4"> -->
+        <!-- Your video here -->
+        <!-- <source src="static/videos/banner_video.mp4" type="video/mp4"> -->
         <!-- </video> -->
         <img src="static/images/1.png" alt="MY ALT TEXT" />
         <h2 class="subtitle has-text-centered">
-          This figure Shows the edited masks from the first stage and the corresponding images generated in the second stage. In the examples, we transformed the viewpoint of park benches and tables from a frontal view to a top-down view and edited their shapes, changing park benches from curved to square edges and tables from square to circular shapes.
+          This figure Shows the edited masks from the first stage and the corresponding images generated in the second
+          stage. In the examples, we transformed the viewpoint of park benches and tables from a frontal view to a
+          top-down view and edited their shapes, changing park benches from curved to square edges and tables from
+          square to circular shapes.
         </h2>
       </div>
     </div>
@@ -162,103 +177,129 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              <em>Dichotomous</em> Image Segmentation (DIS) tasks require highly precise annotations, and traditional dataset creation methods are labor intensive, costly, and require extensive domain expertise. Although using synthetic data for DIS is a promising solution to these challenges, current generative models and techniques struggle with the issues of scene deviations, noise-induced errors, and limited training sample variability. To address these issues, we introduce a novel approach, MaskFactory, which provides a scalable solution for generating diverse and precise datasets, markedly reducing preparation time and costs. We first introduce a general mask editing method that combines rigid and non-rigid editing techniques to generate high-quality synthetic masks. Specially, rigid editing leverages geometric priors from diffusion models to achieve precise viewpoint transformations under zero-shot conditions, while non-rigid editing employs adversarial training and self-attention mechanisms for complex, topologically consistent modifications. Then, we generate pairs of high-resolution image and accurate segmentation mask using a multi-conditional control generation method. Finally, our experiments on the widely-used DIS5K dataset benchmark demonstrate superior performance in quality and efficiency compared to existing methods. Codes will be publicly available.
+              <em>Dichotomous</em> Image Segmentation (DIS) tasks require highly precise annotations, and traditional
+              dataset creation methods are labor intensive, costly, and require extensive domain expertise. Although
+              using synthetic data for DIS is a promising solution to these challenges, current generative models and
+              techniques struggle with the issues of scene deviations, noise-induced errors, and limited training sample
+              variability. To address these issues, we introduce a novel approach, MaskFactory, which provides a
+              scalable solution for generating diverse and precise datasets, markedly reducing preparation time and
+              costs. We first introduce a general mask editing method that combines rigid and non-rigid editing
+              techniques to generate high-quality synthetic masks. Specially, rigid editing leverages geometric priors
+              from diffusion models to achieve precise viewpoint transformations under zero-shot conditions, while
+              non-rigid editing employs adversarial training and self-attention mechanisms for complex, topologically
+              consistent modifications. Then, we generate pairs of high-resolution image and accurate segmentation mask
+              using a multi-conditional control generation method. Finally, our experiments on the widely-used DIS5K
+              dataset benchmark demonstrate superior performance in quality and efficiency compared to existing methods.
+              Codes will be publicly available.
             </p>
           </div>
         </div>
       </div>
     </div>
   </section>
-  
+
   <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Workflow</h2>
-      <div class="item">
-        <div style="display: flex; justify-content: center; align-items: center; height: 80vh;">
-          <img src="static/images/workflow.png" alt="MY ALT TEXT" style="max-width: 100%; max-height: 100%; object-fit: contain;"/>
-        </div>
-        <div style="max-width: 950px; margin: 0 auto;">
-          <h2 class="subtitle has-text-centered">
-            We propose a two-step method that synthesizes high-quality and diverse object masks via mask editing and generates corresponding high-resolution images using a multi-conditional control generation method. In the first stage, we generate new masks by applying rigid and non-rigid editing to the existing ground truth masks. In the second stage, we use the generated masks and their corresponding extracted Canny edges as conditions, along with a prompt representing the category, to generate RGB images. This process forms paired data for our generative model.
-          </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End image carousel -->
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Experiment</h2>
-      <div id="results-carousel" class="carousel results-carousel">
+  <!-- Image carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Workflow</h2>
         <div class="item">
           <div style="display: flex; justify-content: center; align-items: center; height: 80vh;">
-            <img src="static/images/visualresult.png" alt="MY ALT TEXT" style="max-width: 100%; max-height: 100%; object-fit: contain;"/>
+            <img src="static/images/workflow.png" alt="MY ALT TEXT"
+              style="max-width: 100%; max-height: 100%; object-fit: contain;" />
           </div>
           <div style="max-width: 950px; margin: 0 auto;">
             <h2 class="subtitle has-text-centered">
-              Compared with baseline methods
-            </h2>
-          </div>
-        </div>
-        <div class="item">
-          <div style="display: flex; justify-content: center; align-items: center; height: 80vh;">
-            <img src="static/images/experiment1.png" alt="MY ALT TEXT" style="max-width: 100%; max-height: 100%; object-fit: contain;"/>
-          </div>
-          <div style="max-width: 950px; margin: 0 auto;">
-            <h2 class="subtitle has-text-centered">
-              Comparison of experimental results with different generation methods, illustrating the impact of using various numbers of generated images on segmentation task performance.
-            </h2>
-          </div>
-        </div>
-        <div class="item">
-          <div style="display: flex; justify-content: center; align-items: center; height: 80vh;">
-            <img src="static/images/experiment2.png" alt="MY ALT TEXT" style="max-width: 100%; max-height: 100%; object-fit: contain;"/>
-          </div>
-          <div style="max-width: 950px; margin: 0 auto;">
-            <h2 class="subtitle has-text-centered">
-              Comparison of experimental results using different segmentation schemes, demonstrating performance gains with a fixed number of generated images.
-            </h2>
-          </div>
-        </div>
-        <div class="item">
-          <div style="display: flex; justify-content: center; align-items: center; height: 80vh;">
-            <img src="static/images/UMAP_Distribution.png" alt="MY ALT TEXT" style="max-width: 100%; max-height: 100%; object-fit: contain;"/>
-          </div>
-          <div style="max-width: 950px; margin: 0 auto;">
-            <h2 class="subtitle has-text-centered">
-              UMAP Distribution Differences
-            </h2>
-          </div>
-        </div>
-        <div class="item">
-          <div style="display: flex; justify-content: center; align-items: center; height: 80vh;">
-            <img src="static/images/visualresult2.png" alt="MY ALT TEXT" style="max-width: 100%; max-height: 100%; object-fit: contain;"/>
-          </div>
-          <div style="max-width: 950px; margin: 0 auto;">
-            <h2 class="subtitle has-text-centered">
-              Visual Results
+              We propose a two-step method that synthesizes high-quality and diverse object masks via mask editing and
+              generates corresponding high-resolution images using a multi-conditional control generation method. In the
+              first stage, we generate new masks by applying rigid and non-rigid editing to the existing ground truth
+              masks. In the second stage, we use the generated masks and their corresponding extracted Canny edges as
+              conditions, along with a prompt representing the category, to generate RGB images. This process forms
+              paired data for our generative model.
             </h2>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End image carousel -->
+  </section>
+  <!-- End image carousel -->
+
+  <!-- Image carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Experiment</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <div style="display: flex; justify-content: center; align-items: center; height: 80vh;">
+              <img src="static/images/visualresult.png" alt="MY ALT TEXT"
+                style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+            </div>
+            <div style="max-width: 950px; margin: 0 auto;">
+              <h2 class="subtitle has-text-centered">
+                Compared with baseline methods
+              </h2>
+            </div>
+          </div>
+          <div class="item">
+            <div style="display: flex; justify-content: center; align-items: center; height: 80vh;">
+              <img src="static/images/experiment1.png" alt="MY ALT TEXT"
+                style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+            </div>
+            <div style="max-width: 950px; margin: 0 auto;">
+              <h2 class="subtitle has-text-centered">
+                Comparison of experimental results with different generation methods, illustrating the impact of using
+                various numbers of generated images on segmentation task performance.
+              </h2>
+            </div>
+          </div>
+          <div class="item">
+            <div style="display: flex; justify-content: center; align-items: center; height: 80vh;">
+              <img src="static/images/experiment2.png" alt="MY ALT TEXT"
+                style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+            </div>
+            <div style="max-width: 950px; margin: 0 auto;">
+              <h2 class="subtitle has-text-centered">
+                Comparison of experimental results using different segmentation schemes, demonstrating performance gains
+                with a fixed number of generated images.
+              </h2>
+            </div>
+          </div>
+          <div class="item">
+            <div style="display: flex; justify-content: center; align-items: center; height: 80vh;">
+              <img src="static/images/UMAP_Distribution.png" alt="MY ALT TEXT"
+                style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+            </div>
+            <div style="max-width: 950px; margin: 0 auto;">
+              <h2 class="subtitle has-text-centered">
+                UMAP Distribution Differences
+              </h2>
+            </div>
+          </div>
+          <div class="item">
+            <div style="display: flex; justify-content: center; align-items: center; height: 80vh;">
+              <img src="static/images/visualresult2.png" alt="MY ALT TEXT"
+                style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+            </div>
+            <div style="max-width: 950px; margin: 0 auto;">
+              <h2 class="subtitle has-text-centered">
+                Visual Results
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End image carousel -->
 
 
 
-<!-- Image carousel -->
-<!-- <section class="hero is-small">
+  <!-- Image carousel -->
+  <!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Ablation Study</h2>
@@ -291,7 +332,7 @@
     </div>
   </div>
 </section> -->
-<!-- End image carousel -->
+  <!-- End image carousel -->
 
 
 
